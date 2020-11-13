@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title> Price List </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/css/style.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="container-logo">
+            <div class="logo">
+                <h1 class="title-header">Price List</h1>
+                <p class="text-header">CSE 431</p>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <form action="/getPrice" method="GET" class="form_price">
+
+            <fieldset class="form-container">
+                <legend> Retail—Single Piece</legend>
+                <label>
+                    <span>Enter the weight of the item</span>
+                    <input type="number" name="weight" placeholder="weight" min= "0" max="13" step="any" required>
+                </label>
+                <label for="units">
+                    <select name="units" id="unitlist">
+                        <option>Choose your unit </option>
+                        <option value="ounce"> oz. </option>
+                        <option value="pound"> lb. </option>
+                    </select>
+
+                </label>
+
+                <br>
+
+                <label for="mailType">
+                    <span class="type">Select your mail type </span>
+                    <select name="mailType" id="typelist">
+                        <option>Choose your mail Type </option>
+                        <option value='Letters (Stamped)'> Letters (Stamped) </option>
+                        <option value='Letters (Metered)'> Letters (Metered) </option>
+                        <option value='Large Envelopes (Flats'> Large Envelopes (Flats) </option>
+                        <option value='Keys and Identification Devices'> Keys and Identification Devices </option>
+                    </select>
+
+                </label>
+                <br>
+
+                <input type="submit" name="submit" class="btn" value="Get the Price">
+
+
+            </fieldset>
+        </form>
+
+
+        <form action="/getPriceT" method="GET" class="form-price">
+
+            <fieldset class="form-container">
+                <legend> Retail Parcels </legend>
+                <label>
+                    <span>Enter the weight of the item</span>
+                    <input type="number" name="weightT" placeholder="weight" min= "0" max="13" step="any" required>
+                </label>
+
+                <br>
+
+                <label for="zones">
+                    <span class="type">Select Zone </span>
+                    <select name="zones" id="zoneslist">
+                        <option>Choose your Zone </option>
+                        <option value='1'> Zone 1 </option>
+                        <option value='2'> Zone 2 </option>
+                        <option value='3'> Zone 3 </option>
+                        <option value='4'> Zone 4 </option>
+                        <option value='5'> Zone 5 </option>
+                        <option value='6'> Zone 6 </option>
+                        <option value='7'> Zone 7 </option>
+                        <option value='8'> Zone 8 </option>
+                        <option value='9'> Zone 9 </option>
+                    </select>
+                </label>
+                <br>
+
+                <input type="submit" name="submit" class="btn" value="Get the Price">
+
+            </fieldset>
+        </form>
+
+        <table>
+            <tr>
+                <th>Shipping Zone</th>
+                <th>Milke Radius</th>
+            </tr>
+            <tr>
+                <td>Zone 1 (local)</td>
+                <td>50 mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 2</td>
+                <td>51 – 150 mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 3</td>
+                <td>151 – 300 mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 4</td>
+                <td>301 – 600 mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 5</td>
+                <td>601 – 1000 mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 6</td>
+                <td>1001 – 1400 mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 7</td>
+                <td>1401 – 1800 mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 8</td>
+                <td>1801+ mile radius</td>
+            </tr>
+            <tr>
+                <td>Zone 9</td>
+                <td>Freely Associated States</td>
+            </tr>
+        </table>
+
+    </main>
+
+
+    <footer>
+        <div class="container-footer">
+            <p class="footer-bar">
+                &copy;2020 &nbsp; All Rights Reserved &nbsp; &nbsp; | &nbsp; &nbsp; CSE 341 - Web Backen Development II
+                &nbsp;
+                &nbsp; | &nbsp; &nbsp; Gianna Echegaray &nbsp; &nbsp; | &nbsp;
+                &nbsp;
+                <span id="currentdate"> Current Date Placeholder</span>
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
