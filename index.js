@@ -53,15 +53,16 @@ function handlePrice(req, res) {
                 }
 
             } else {
-                res.render("pages/nofound");
-                res.end();
+
+                return res.render("pages/nofound");
+                
             }
 
             break;
 
         case "Letters (Metered)":
 
-            if (unit === "ounce") {
+            if (unit === "ounce" && weight <3.5) {
 
                 if (weight <= 1) {
                     price = "$0.50";
@@ -75,7 +76,7 @@ function handlePrice(req, res) {
 
             } else {
 
-                price = "Please enter a valid number"
+                return res.render("pages/nofound");
             }
 
             break;
@@ -114,7 +115,8 @@ function handlePrice(req, res) {
                 }
 
             } else {
-                price = "Please enter a valid number"
+                
+                return res.render("pages/nofound");
 
             }
 
@@ -159,6 +161,7 @@ function handlePrice(req, res) {
                     price = "$10.75";
                 } else {
 
+                    return res.render("pages/nofound");
 
                 }
             }
